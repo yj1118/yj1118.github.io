@@ -1,34 +1,49 @@
----
----
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="./assets/css/style.css">
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{"/favicon.ico" | relative_url }}" type="image/x-icon" />
+    <link rel="dns-prefetch" href="https://{{ site.disqus.shortname }}.disqus.com">
+    <meta
+    itemprop="description"
+    name="description"
+    content="
+        {% if page.description %}
+            {{ page.description | truncate: 160 }}
+        {% else %}
+            {{ site.description | truncate: 160  }}
+        {% endif %}"
+    />
+    <title>
+      {%if page.title %}
+          {{ page.title }}
+      {% else %}
+          {{ site.title }}
+      {% endif %}
+    </title>
+    <!-- async load css file -->
+    <link rel="stylesheet" href="{{"/assets/css/styles.css" | relative_url}}" media="none" onload="if(media!='all')media='all'">
+    <!-- Load css when script is disabled -->
+    <noscript><link rel="stylesheet" href="{{"/assets/css/styles.css" | relative_url}}"></noscript>
+
+    <!-- Dns Prefetch the google analytics -->
+    <link rel="dns-prefetch" href="www.googletagmanager.com">
+    <link rel="dns-prefetch" href="www.google-analytics.com">
+
+
+
+    <!-- Load the script async and wait for the page to render for script to execute -->
+    <script defer src="{{"/assets/js/theme.js" | relative_url }}"></script>
+    <script defer src="{{"/assets/js/script.js" | relative_url }}"></script>
+
+    {% include analytics.html %}
+    {% feed_meta %}
+    {% seo %}
+
   </head>
-  <body>
-    <div class="Margins">
-      <p class="LatexTitle">{{ page.title }}</p>
-      {% if page.author %} <p class="LatexName">{{ page.author }}</p> {% endif %}
-      {% if page.date %} <p class="LatexDate">{{ page.date }}</p> {% endif %}
-      
-      {% if page.abstract %}<div class="AbstractMargins">
-        <p class="LatexAbstract">Abstract</p>
-        <p class="LatexAbstractText">{{ page.abstract }}</p>
-      </div>{% endif %}
-
-      
+    <body onload="onLoad()">
+      {% include themeSelector.html %}
       {{ content }}
-
-
-    </div>
-  </body>
-  <footer class="footerSize">
-
-  </footer>
+    </body>
 </html>
