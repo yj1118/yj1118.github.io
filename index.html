@@ -31,7 +31,21 @@
 	<!--External fonts-->
 
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<style>
+		#copy-email {
+			border-radius: 50px !important;
+    		width: 100% !important;
+			text-align: center;
+		}
+		.contacts-item .content .title {
+			font-size: 20px !important;
+			line-height: 40px;
+		}
 
+		.contacts .contacts-item .content .sub-title {
+			line-height: 18px;
+			}
+	</style>
 </head>
 
 
@@ -186,7 +200,8 @@
 	<div class="stunning-header stunning-header-bg-lightgray">
 		<div class="stunning-header-content">
 			<h1 class="stunning-header-title c-dark">CodeArt Framework</h1>
-			<h5 class="slider-content-text c-gray" data-swiper-parallax="-200">ソフトウェアの複雑性の解決法</h5>
+			<h5 class="slider-content-text c-gray" data-swiper-parallax="-200" style="padding-bottom: 20px;">ソフトウェアの複雑性の解決法</h5>
+			<a href="https://github.com/yj1118/CodeArt" target="_blank" ><img src="./img/logo/github-mark.svg" width="50px" height="50px" /></a>
 		</div>
 	</div>
 
@@ -740,7 +755,7 @@
 										<div class="testimonial-item">
 
 											<div class="testimonial-text" style="font-size: 22px;">
-												CodeArt（CA）を使用して以来、チームの開発効率が明らかに向上し、データベースへのアクセスに起因するさまざまなバグ修正の必要がなくなりました。これにより、データアクセスを中心とした開発モデルから完全に脱却しました。
+												CodeArtを使用して以来、チームの開発効率が明らかに向上し、データベースへのアクセスに起因するさまざまなバグ修正の必要がなくなりました。これにより、データアクセスを中心とした開発モデルから完全に脱却しました。
 											</div>
 
 											<div class="author-info-wrap">
@@ -785,72 +800,21 @@
 
 	<div class="container">
 		<div class="row medium-padding120">
-			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="heading">
-					<h4 class="h1 heading-title">See How Well Your
-						Page is Optimized</h4>
+					<h4 class="h1 heading-title">テクニカルサポート</h4>
 					<div class="heading-line">
 						<span class="short-line"></span>
 						<span class="long-line"></span>
 					</div>
 
-					<h5 class="heading-subtitle">Let us help you get your business online and grow it with passion.</h5>
+					<h5 class="heading-subtitle">私たちがプロジェクトの完成にお手伝いさせていただきます。</h5>
 
-					<p>Our team of professional SEO experts is the perfect partner for a successful business partnership.
-					</p>
+					<p>私たちはチームにメンバーを派遣してプロジェクトを共同で完成するか、またはプロジェクトを外部に委託することも可能です。</p>
 				</div>
 			</div>
 
-			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-
-				<form class="contact-form crumina-submit" data-nonce="crumina-submit-form-nonce" data-type="standard" action="modules/forms/submit.php">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<input name="site" class="input-standard-grey" placeholder="Website URL" type="text" required>
-						</div>
-
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<input name="name" class="input-standard-grey" placeholder="Your Name" type="text" required>
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<input name="email" class="input-standard-grey" placeholder="Email Address" type="email" required>
-						</div>
-
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<input name="phone" class="input-standard-grey" placeholder="Phone" type="text">
-						</div>
-
-					</div>
-
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<textarea name="message" class="input-standard-grey" placeholder="Details"></textarea>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="submit-block table">
-							<div class="col-lg-3 table-cell">
-								<button class="btn btn-small btn--primary">
-									<span class="text">Submit Now</span>
-								</button>
-							</div>
-
-							<div class="col-lg-5 table-cell">
-								<div class="submit-block-text">
-									Please, let us know any particular things to check and the best time
-									to contact you by phone (if provided).
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
+			
 		</div>
 	</div>
 
@@ -867,14 +831,11 @@
 					<div class="subscribe scrollme">
 
 						<div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
-							<h4 class="subscribe-title">Email Newsletters!</h4>
-							<form class="subscribe-form crumina-submit" method="post" data-nonce="crumina-submit-form-nonce" data-type="standard" action="modules/forms/submit.php">
-								<input class="input-standard-grey input-white" name="email" placeholder="Your Email Address" type="email" required>
-								<button class="subscr-btn">subscribe
-									<span class="semicircle--right"></span>
-								</button>
-							</form>
-							<div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div>
+							<h4 class="subscribe-title">メール通信</h4>
+							<div class="subscribe-form">
+								<input id="copy-email" class="input-standard-grey input-white" name="email" readonly value="yuanjun1118@gmail.com" type="email" required>
+							</div>
+							<div class="sub-title">日本に来てまだ間もないです。日本語がまだ得意ではありませんが、何かご不明点がありましたら、メールでお気軽にご連絡ください。ご理解とご協力、ありがとうございます。</div>
 
 						</div>
 
@@ -1015,7 +976,7 @@
 							<svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="  54,17 32,36 10,17 " stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><line fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="10.9" x2="26" y1="48" y2="36"/><path d="  M32.7,49H13c-2.2,0-4-1.8-4-4V19c0-2.2,1.8-4,4-4h38c2.2,0,4,1.8,4,4v15.5" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="44.9" cy="43.1" fill="none" r="10.1" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><path d="  M44,41.4c0,0-1.3,3.4-0.9,5.1c0.4,1.7,2.6,2.1,3.7,1.1" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><g><circle cx="45.4" cy="38.3" fill="#DCE9EE" r="0.9"/><path d="M45.4,37.3c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9s0.9-0.4,0.9-0.9C46.4,37.8,46,37.3,45.4,37.3   L45.4,37.3z" fill="#f15b26"/></g></svg>
 						</div>
 						<div class="content">
-							<a href="#" class="title">info@seosight.com</a>
+							<a href="javascript:void(0);" class="title">yuanjun1118@gmail.com</a>
 							<p class="sub-title">online support</p>
 						</div>
 					</div>
