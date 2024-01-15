@@ -1,0 +1,35 @@
+#copy-email {
+    border-radius: 50px !important;
+    width: 100% !important;
+    text-align: center;
+}
+.contacts-item .content .title {
+    font-size: 20px !important;
+    line-height: 40px;
+}
+
+.contacts .contacts-item .content .sub-title {
+    line-height: 18px;
+}
+
+.w-100{
+    width: 100% !important;
+}
+
+.right-menu .right-menu-wrap {
+    padding: 80px 75px 30px 75px!important;
+}
+
+.right-menu .right-menu-wrap .text {
+    line-height: 22px!important;
+    font-size: 16px!important;
+    margin-top: 15px;
+}
+
+.footer .info .heading .heading-text{
+    margin-bottom: 15px !important;
+}
+
+.services .list > li{
+    margin-bottom: 25px !important;
+}
